@@ -56,7 +56,7 @@ typings/
 
 # dotenv environment variables file
 # I don't have better idea, to share sensitive database connection data. (°,°)
-.env
+#.env
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache

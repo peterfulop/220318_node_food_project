@@ -1,16 +1,5 @@
 import mongoose from 'mongoose';
 
-const FoodDetails = new mongoose.Schema({
-  unit: {
-    type: String,
-    required: true,
-  },
-  amount: {
-    type: Number,
-    required: true,
-  },
-});
-
 const FoodSchema = new mongoose.Schema(
   {
     name: {
@@ -19,7 +8,15 @@ const FoodSchema = new mongoose.Schema(
       trim: true,
     },
     details: {
-      type: mongoose.model('FoodDetails', FoodDetails),
+      type: mongoose.Schema.Types.Map,
+      unit: {
+        type: String,
+        required: true,
+      },
+      amount: {
+        type: Number,
+        required: true,
+      },
       required: false,
     },
   },
