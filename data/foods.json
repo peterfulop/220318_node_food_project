@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Crustless Spinach Quiche",
+    "details": {
+      "vegetable oil": { "unit": "tablespoon", "amount": 1 },
+      "onion": { "unit": "piece", "amount": 1 },
+      "chopped spinach": { "unit": "ounce", "amount": 10 },
+      "beaten egg": { "unit": "piece", "amount": 5 },
+      "shredded Muenster cheese": { "unit": "cup", "amount": 3 },
+      "salt": { "unit": "tablespoon", "amount": 0.25 },
+      "ground black pepper": { "unit": "teaspone", "amount": 0.125 }
+    }
+  },
+  {
+    "name": "Good Old Fashioned Pancakes",
+    "details": {
+      "flour": { "unit": "cup", "amount": 1.5 },
+      "baking powder": { "unit": "teaspoons", "amount": 3.5 },
+      "salt": { "unit": "tablespoon", "amount": 1 },
+      "milk": { "unit": "cup", "amount": 1.25 },
+      "egg": { "unit": "piece", "amount": 1 },
+      "butter, melted": { "unit": "tablespoon", "amount": 3 }
+    }
+  },
+  {
+    "name": "Quick Quiche",
+    "details": {
+      "slices bacon": { "unit": "slice", "amount": 8 },
+      "shredded Swiss cheese": { "unit": "ounces", "amount": 1 },
+      "butter, melted": { "unit": "tablespoon", "amount": 2 },
+      "beaten egg": { "unit": "piece", "amount": 4 },
+      "finely chopped onion": { "unit": "cup", "amount": 0.25 },
+      "salt": { "unit": "tablespoon", "amount": 1 },
+      "milk": { "unit": "cup", "amount": 0.5 }
+    }
+  },
+  {
+    "name": "Almond Berry Smoothie",
+    "details": {
+      "frozen blueberries": { "unit": "cup", "amount": 1 },
+      "banana": { "unit": "piece", "amount": 1 },
+      "milk": { "unit": "cup", "amount": 1.25 },
+      "butter, almound": { "unit": "tablespoon", "amount": 1 },
+      "water": { "unit": "cup", "amount": 0.5 }
+    }
+  }
+]
