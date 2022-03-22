@@ -38,7 +38,7 @@ class App {
   }
 
   private initialiseControllers(controllers: Controller[]): void {
-    controllers.forEach((controller: Controller) => {
+    controllers.map((controller: Controller) => {
       this.express.use(process.env.API_URL as string, controller.router);
     });
     this.routeErrorHandling();
