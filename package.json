@@ -6,8 +6,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start:dev": "ts-node-dev index.js",
-    "start:import": "ts-node-dev index.js --import",
+    "start:dev": "ts-node-dev src/index.ts",
+    "start:import": "ts-node-dev src/index.ts --import",
     "start:build": "tsc-watch",
     "start:prod": "SET NODE_ENV=production& node index.js"
   },
