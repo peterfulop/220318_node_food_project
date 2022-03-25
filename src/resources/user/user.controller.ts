@@ -7,6 +7,7 @@ import UserService from './user.service';
 import validation from './user.validation';
 import { createSendToken } from '../../utils/token';
 import { protect } from '../../middleware/protect.middleware';
+import { STATUS_CODES } from 'http';
 
 class UserController implements Controller {
   path = '/user';
@@ -64,6 +65,7 @@ class UserController implements Controller {
       });
       res.status(200).json({
         status: 'You logged out!',
+        statusCode: res.statusCode,
       });
     } catch (error: any) {
       next(new HttpExceptions(500, error.message));
@@ -75,6 +77,7 @@ class UserController implements Controller {
       const data = await this.userService.getUsers();
       res.status(200).json({
         status: 'success',
+        statusCode: res.statusCode,
         results: data.length,
         data,
       });
@@ -90,6 +93,7 @@ class UserController implements Controller {
       if (!data) throw Error('nodata');
       res.status(200).json({
         status: 'success',
+        statusCode: res.statusCode,
         data,
       });
     } catch (error: any) {
@@ -105,6 +109,7 @@ class UserController implements Controller {
       if (!data) throw Error('nodata');
       res.status(200).json({
         status: 'success',
+        statusCode: res.statusCode,
         data,
       });
     } catch (error: any) {
@@ -118,6 +123,7 @@ class UserController implements Controller {
       await this.userService.deleteUser(id);
       res.status(204).json({
         status: 'success',
+        statusCode: res.statusCode,
         message: 'Document has been deleted',
       });
     } catch (error: any) {

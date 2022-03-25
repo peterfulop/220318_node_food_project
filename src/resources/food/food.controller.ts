@@ -29,6 +29,7 @@ class FoodController implements Controller {
       const data = await this.FoodService.getFoods();
       res.status(200).json({
         status: 'success',
+        statusCode: res.statusCode,
         results: data.length,
         data,
       });
@@ -44,6 +45,7 @@ class FoodController implements Controller {
       if (!data) throw Error('nodata');
       res.status(200).json({
         status: 'success',
+        statusCode: res.statusCode,
         data,
       });
     } catch (error: any) {
@@ -55,7 +57,7 @@ class FoodController implements Controller {
     try {
       const { name, details } = req.body as FoodEntryCreateOptions;
       const data = await this.FoodService.createFood({ name, details });
-      res.status(201).json({ status: 'success', data });
+      res.status(201).json({ status: 'success', statusCode: res.statusCode, data });
     } catch (error: any) {
       next(new HttpExceptions(500, error.message));
     }
@@ -69,6 +71,7 @@ class FoodController implements Controller {
       if (!data) throw Error('nodata');
       res.status(200).json({
         status: 'success',
+        statusCode: res.statusCode,
         message: 'Document has been updated',
         data,
       });
@@ -83,6 +86,7 @@ class FoodController implements Controller {
       await this.FoodService.deleteFood(id);
       res.status(204).json({
         status: 'success',
+        statusCode: res.statusCode,
         message: 'Document has been deleted',
       });
     } catch (error: any) {

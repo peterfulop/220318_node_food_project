@@ -32,6 +32,7 @@ const ErrorMiddleware = (err: HttpExceptions, req: Request, res: Response, next:
   const errorObj: ErrorObject = setErrorDetails(err);
   res.status(errorObj.statusCode).send({
     error: errorObj.errorMessage,
+    statusCode: errorObj.statusCode,
   });
 };
 
